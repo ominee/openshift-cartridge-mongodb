@@ -16,7 +16,6 @@ function start() {
   else
     client_message 'Starting MongoDB...'
     nohup ${OPENSHIFT_DATA_DIR}.mongodb/bin/mongod \
-      --replSet "rs0"                              \
       --nounixsocket                               \
       --storageEngine wiredTiger                   \
       --dbpath ${OPENSHIFT_DATA_DIR}.mongodb/data  \
