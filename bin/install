@@ -8,12 +8,6 @@ curl -L -o ${OPENSHIFT_DATA_DIR}tmp.tgz http://fastdl.mongodb.org/linux/mongodb-
 # Create bin directory if necessary
 mkdir -p ${OPENSHIFT_DATA_DIR}.mongodb/bin
 
-# Create etc directory if necessary
-mkdir -p ${OPENSHIFT_DATA_DIR}.mongodb/etc
-
-# Create an empty configuration file
-touch ${OPENSHIFT_DATA_DIR}.mongodb/etc/mongod.conf
-
 # Copy just the mongod binary
 tar -xvzf ${OPENSHIFT_DATA_DIR}tmp.tgz --strip-components=1 -C ${OPENSHIFT_DATA_DIR}.mongodb mongodb-linux-x86_64-${2}/bin/mongod
 
